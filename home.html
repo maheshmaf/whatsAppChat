@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+      @keyframes fadein {
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-moz-keyframes fadein { /* Firefox */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-webkit-keyframes fadein { /* Safari and Chrome */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity:1;
+          }
+      }
+      @-o-keyframes fadein { /* Opera */
+          from {
+              opacity:0;
+          }
+          to {
+              opacity: 1;
+          }
+      }
+      .header{
+        background-color:#8854e7;
+        color:#ffffff;
+        padding:10px;
+        box-shadow: 1px 1px 5px 1px #8854e7;
+      }
+      .header *{
+        color:#ffffff !important;
+      }
+      .card-header{
+        background:#f0eff4;
+        border-top: 1px solid #d8d8d8;
+      }
+      .navbar-brand{
+        margin-right:0px;
+      }
+      .card-body{
+        padding:10px;
+      }
+      .time-stamp{
+        font-size:x-small;
+        margin-top:auto;
+      }
+      .space{
+        margin:20px 0px;
+      }
+      .user-message{
+        animation: fadein 1s;
+        -moz-animation: fadein 1s;
+        -webkit-animation: fadein 1s;
+        -o-animation: fadein 1s;
+        background:#c5efa3;
+        padding:10px;
+        border-radius:6px;
+        border-top-right-radius:0px;
+        box-shadow:-1px 1px 0px 1px lightgrey;
+      }
+      .partner-message{
+        animation: fadein 1s;
+        -moz-animation: fadein 1s;
+        -webkit-animation: fadein 1s;
+        -o-animation: fadein 1s;
+        background:#ffffff;
+        padding:10px;
+        border-radius:6px;
+        border-top-left-radius:0px;
+        box-shadow:2px 2px 0px -1px lightgrey
+      }
+      #triangle-topright {
+        animation: fadein 1s;
+        -moz-animation: fadein 1s;
+        -webkit-animation: fadein 1s;
+        -o-animation: fadein 1s;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #ffffff;
+        border-left: 10px solid transparent;
+      }
+      #triangle-topleft {
+        animation: fadein 1s;
+        -moz-animation: fadein 1s;
+        -webkit-animation: fadein 1s;
+        -o-animation: fadein 1s;
+        width: 0;
+        height: 0;
+        border-top: 10px solid #c5efa3;
+        border-right: 10px solid transparent;
+      }
+      .sub{
+        margin-top:10px;
+      }
+    </style>
+  </head>
+  <body style="background:#f0eff4;">
+      <div class="header text-center container-fluid fixed-top">
+          <a class="float-left navbar-brand" href="#">
+            <i class="fa fa-chevron-left"></i>
+          </a>
+          <div style="display:inline-grid;">
+              <span class="mb-0 h4" id="user_name"></span>
+              <span class="text-muted" style="font-size: xx-small;" id="user_status"></span>
+          </div>
+      </div>
+
+    <div id="chat_window" style="overflow-x:hidden;overflow-y:auto;margin:70px 0px;">
+
+<!-- 
+        <div class="container space">
+            <div class="row">
+            <div class="text-muted px-2 time-stamp">12:30 PM</div>
+            <div class="col-8 px-0">
+            <div class="user-message">
+            <p class="card-text">This is a Test Mesasge</p>
+            </div>
+            </div>
+            <i id="triangle-topleft"></i>
+            <div class="mr-auto ml-auto">
+            <img src="https://mladenplavsic.github.io/css-ripple-effect/images/logo_browserstack.svg" width="45" height="45" class="rounded-circle">
+            </div>
+            </div>
+            </div>
+            </div>
+            </div> -->
+<!-- 
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> -->
+
+  </div>
+
+      <div class="card-header input-group fixed-bottom">
+        <span class="input-group-addon" id="basic-addon1"><i class="fa fa-camera"></i></span>
+        <input type="text" class="form-control rounded-right" aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+
+
+
+  </body>
+  <script>
+    var userinfo= [{"id":  "17",
+                    "name": "Ramesh",
+                    "photo": "https://i.ytimg.com/vi/5dNqXMxp-Jc/maxresdefault.jpg",
+                    "about": "Cool buddy...",
+                    "status": "Online"
+                  }];
+    var partnerinfo= [{"id":  "18",
+                      "name": "Suresh",
+                      "photo": "http://www.campaignbriefasia.com/assets_c/2016/10/Cadbury%205Star3-thumb-400x167-234707.jpg",
+                      "about": "Cool buddy...",
+                      "status": "typing"
+                    }];
+    $('#user_name').html(userinfo[0]['name']);
+    $('#user_status').html(userinfo[0]['status']);
+
+    var messages = [{"id":  "17",
+                        "name": "Ramesh",
+                        "photo": "https://i.ytimg.com/vi/5dNqXMxp-Jc/maxresdefault.jpg",
+                        "message": "There is an bufet man",
+                        "time": "04:41 pm"
+                      },{"id":  "18",
+                        "name": "Suresh",
+                        "photo": "http://www.campaignbriefasia.com/assets_c/2016/10/Cadbury%205Star3-thumb-400x167-234707.jpg",
+                        "message": "Where is it ia am hungry.",
+                        "time": "04:41 pm"
+                      },{"id":  "18",
+                        "name": "Suresh",
+                        "photo": "http://www.campaignbriefasia.com/assets_c/2016/10/Cadbury%205Star3-thumb-400x167-234707.jpg",
+                        "message": "Tell da ASAP.",
+                        "time": "04:41 pm"
+                      },{"id":  "17",
+                        "name": "Ramesh",
+                        "photo": "https://i.ytimg.com/vi/5dNqXMxp-Jc/maxresdefault.jpg",
+                        "message": "Po da naa solla mateh. Naa hurt!",
+                        "time": "04:42 pm"
+                      },{"id":  "17",
+                        "name": "Ramesh",
+                        "photo": "https://i.ytimg.com/vi/5dNqXMxp-Jc/maxresdefault.jpg",
+                        "message": "Po da naa solla mateh. Naa hurt!",
+                        "time": "04:42 pm"
+                      }];
+   
+    var count=0;
+    $.each(messages,function(k,v){
+    if(typeof messages[count] !== "undefined")
+      {
+        setTimeout(function(){
+        html = '';
+        html += '<div class="container space">';
+        html += '<div class="row">';
+      if(messages[count]['id']==userinfo[0]['id']){
+        html += '<div class="text-muted px-2 time-stamp">'+messages[count]['time']+'</div>';
+        html += '<div class="col-8 px-0">';
+        html += '<div class="user-message">';
+        html += '<p class="card-text">'+messages[count]['message']+'</p>';
+        html += '</div>';
+        if(messages.length>count+1){
+            if(messages[count]['id'] == messages[count+1]['id']){
+              html += '<div class="user-message sub">';
+              html += '<p class="card-text">'+messages[count+1]['message']+'</p>';
+              html += '</div>';
+              count++;
+              }
+          }
+        html += '</div>';
+        html += '<i id="triangle-topleft"></i>';
+        html += '<div class="mr-auto ml-auto">';
+        html += '<img src="'+messages[count]['photo']+'" width="45" height="45" class="rounded-circle">';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+      }else{
+        html += '<div class="mr-auto ml-auto">';
+        html += '<img src="'+messages[count]['photo']+'" width="45" height="45" class="rounded-circle">';
+        html += '</div>';
+        html += '<i id="triangle-topright"></i>';
+        html += '<div class="col-8 px-0">';
+        html += '<div class="partner-message">';
+        html += '<p class="card-text">'+messages[count]['message']+'</p>';
+        html += '</div>';
+        if(messages.length>count+1){
+            if(messages[count]['id'] == messages[count+1]['id']){
+              html += '<div class="partner-message sub">';
+              html += '<p class="card-text">'+messages[count+1]['message']+'</p>';
+              html += '</div>';
+              count++;
+              }
+          }
+        html += '</div>';
+        html += '<div class="text-muted px-2 time-stamp">'+messages[count]['time']+'</div>';
+      }
+        html += '</div>';
+        html += '</div>';
+        $("#chat_window").append(html);
+        count++;
+      },k * 500);
+      }
+    });
+
+    if(partnerinfo[0]['status']=='typing'){
+      setTimeout(function(){
+        html = '';
+        html += '<div class="container space">';
+        html += '<div class="ml-4 row">';
+        // html += '<div class="mr-auto ml-auto">';
+        // html += '<img src="'+partnerinfo[0]['photo']+'" width="45" height="45" class="rounded-circle">';
+        // html += '</div>';
+        html += '<i id="triangle-topright"></i>';
+        html += '<div class="partner-message" style="padding:0px 10px;">';
+        html += '<p class="card-text"><i class="fas fa-ellipsis-h"></i></p>';
+        html += '</div>';
+        html += '</div>';
+        html += '</div>';
+        $("#chat_window").append(html);
+      },messages.length * 500);
+    }
+  </script>
+</html>
